@@ -1,7 +1,8 @@
 name: wcwidth
-description: A new Flutter package project.
+description: wcwidth for dart
 version: 0.0.1
-homepage:
+homepage: https://github.com/imRobots/wcwidth.git
+repository: https://github.com/imRobots/wcwidth.git
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
