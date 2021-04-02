@@ -1,3 +1,7 @@
+## 0.0.4
+
+* support null-safety & remove flutter dependencies
+
 ## 0.0.3
 
 * remove "unnecessary" imports
