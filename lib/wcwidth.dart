@@ -1,8 +1,7 @@
 library wcwidth;
 
 import 'package:characters/characters.dart';
-import 'package:flutter/cupertino.dart';
-import 'east_asian_width.dart';
+import 'src/east_asian_width.dart';
 
 extension StringEastAsianWidth on String {
   int wcwidth() {
