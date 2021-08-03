@@ -1,12 +1,13 @@
 library wcwidth;
 
 import 'package:characters/characters.dart';
+import 'src/ansi.dart';
 import 'src/east_asian_width.dart';
 
 extension StringEastAsianWidth on String {
   int wcwidth() {
     int w = 0;
-    for (var ch in this.characters) {
+    for (var ch in stripAnsi().characters) {
       if (ch.runes.length > 1) {
         w += 2;
       } else {

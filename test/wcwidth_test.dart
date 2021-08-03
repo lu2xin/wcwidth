@@ -1,11 +1,19 @@
 import 'package:test/test.dart';
 import 'package:wcwidth/wcwidth.dart';
+import 'package:ansicolor/ansicolor.dart';
 
 void main() {
+  final pen = AnsiPen()..red();
+
   test('wcwidth calc', () {
-    expect('你好'.wcwidth(), 4);
-    expect('A'.wcwidth(), 1);
-    expect('abc'.wcwidth(), 3);
-    expect('123😄def'.wcwidth(), 8);
+    for (final testCase in {
+      '你好': 4,
+      'A': 1,
+      'abc': 3,
+      '123😄def': 8,
+    }.entries) {
+      expect(testCase.key.wcwidth(), testCase.value);
+      expect(pen(testCase.key).wcwidth(), testCase.value);
+    }
   });
 }
